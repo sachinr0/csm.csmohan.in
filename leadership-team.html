@@ -44,6 +44,112 @@
     <link href="assets/css/main.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/slick-custom.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/icofont.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        .card.shadow {
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .member-content .details {
+            margin: 20px 0 0 20px;
+            position: relative;
+            padding: 30px;
+            padding-left: 100px;
+            background: #f5f5f5;
+            border-radius: 10px;
+            box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.08);
+            -webkit-transition: all .3s ease-out;
+            transition: all .3s ease-out;
+        }
+
+        .member-content {
+            margin-bottom: 30px;
+        }
+
+        .member-thumb {
+            text-align: center;
+        }
+
+        .member-thumb h4 {
+            font-size: 21px;
+            margin: 10px 0;
+        }
+
+        .member-thumb .title {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #2b5e9b;
+        }
+
+        .member-content:hover .details {
+            background: #2b5e9b;
+            color: #fff;
+        }
+
+        .member-content.right .details {
+            margin: 20px 20px 0 0;
+            box-shadow: -5px 5px 0 rgba(0, 0, 0, 0.08);
+        }
+
+        .member-content .details:after {
+            display: block;
+            content: "";
+            position: absolute;
+            left: -18px;
+            top: 30px;
+            width: 0px;
+            height: 0px;
+            background: transparent;
+            border: 20px solid transparent;
+            border-left: 20px solid #f5f5f5;
+            box-shadow: -3px 0 0 rgba(0, 0, 0, 0.08);
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            -webkit-transition: border-left-color .3s ease-out;
+            transition: border-left-color .3s ease-out;
+        }
+
+        .member-content.right .details:after {
+            position: absolute;
+            left: auto;
+            right: -17px;
+            border-left: 20px solid transparent;
+            border-right: 20px solid #f5f5f5;
+            box-shadow: 3px 0 0 0 rgba(0, 0, 0, 0.08);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            -webkit-transition: border-right-color .3s ease-out;
+            transition: border-right-color .3s ease-out;
+        }
+
+        .member-content:hover .details:after {
+            border-left-color: #2b5e9b;
+        }
+
+        .member-content.right:hover .details:after {
+            border-left-color: transparent;
+            border-right-color: #2b5e9b;
+        }
+
+        .member-content .details:before {
+            display: block;
+            content: "\201D";
+            position: absolute;
+            left: 20px;
+            top: 50px;
+            font-size: 120px;
+            font-weight: 800;
+            line-height: 60px;
+            font-family: Arial;
+            color: #2b5e9b;
+            -webkit-transition: all .3s ease-out;
+            transition: all .3s ease-out;
+        }
+
+        .member-content:hover .details:before {
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
@@ -53,14 +159,14 @@
             <div class="row">
                 <div class="col logo">
                     <h1 class="text-light"><a href="index.html">
-                            <img class="inline" src="assets/images/CSInvert.png" />
+                            
                             <span>CSM Corporate Services</span></a></h1>
                 </div>
                 <div class="col-auto float-right text-light d-none d-md-block fix-right">
                     <p class="text-12px"><i class="ri-mail-fill"></i> <a
-                            href="mailto:needamohan2@gmail.com">needamohan2@gmail.com</a> (For Employers) <br /><i
+                            href="mailto:csm@csmohan.in">csm@csmohan.in</a> (For Employers) <br /><i
                             class="ri-mail-fill"></i> <a
-                            href="csmcorporateservices@gmail.com">csmcorporateservices@gmail.com</a> (For candidates)
+                            href="mailto:csmcorporateservices@gmail.com">csmcorporateservices@gmail.com</a> (For candidates)
                     </p>
                 </div>
             </div>
@@ -93,33 +199,49 @@
 
         <h1 class="my-4">Leadership Team</h1>
 
-        <section id="partner">
-            <h3>A. Mohan Kumar, Partner</h3>
-            <!-- <p>We hold specialization in offering consultancy services in the following areas:</p> -->
-            <ul>
-                <li>A. Mohan Kumar is a Company Secretary and a Management Consultant.
-                </li>
-                <li>He has worked in many multi-national Companies and has headed their Finance, Legal and compliance
-                    divisions successfully for the past two decades.
-                </li>
-                <li>He has individual connection with thousands of Company Secretary, Chartered accountant, Cost
-                    accountant professionals and able to understand the client requirement and find a suitable resource
-                    from his vast personal network.
-                </li>
-            </ul>
-        </section>
-        <br />
-        <section id="partner2">
-            <h3>V Chitra, Partner</h3>
-            <ul>
-                <li>Mrs. Chitra has more than two decades of experience in Corporate before she co founded CSM Corporate
-                    Services along with Mr. Mohan.
-                </li>
-                <li>She heads the Operations of CSM Corporate Services and assesses candidates individually with
-                    Technical and personality based questions.
-                </li>
-            </ul>
-        </section>
+        <div class="container mx-auto">
+            <div class="row member-content">
+                <div class="col-md-3 offset-sm-1 member-thumb fade-right in">
+                    <img class="img-fluid img-center img-thumbnail rounded-circle"
+                        src="https://res.cloudinary.com/csmohan/image/upload/v1649000443/leadership-team/csmohan2_leykof.jpg"
+                        alt="">
+                    <h4>A. Mohan Kumar</h4>
+                    <p class="title">Partner</p>
+                </div>
+                <div class="col-md-8">
+                    <div class="details">
+                        <p>A. Mohan Kumar is a Company Secretary and a Management Consultant.
+                            He has worked in many multi-national Companies and has headed their Finance, Legal and
+                            compliance divisions successfully for the past two decades.
+                        </p>
+                        <p>He has individual connection with thousands of Company Secretary, Chartered accountant, Cost
+                            accountant professionals and able to understand the client requirement and find a suitable
+                            resource from his vast personal network.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="row member-content right">
+                <div class="col-md-3 order-sm-2 member-thumb">
+                    <img class="img-fluid img-center img-thumbnail rounded-circle"
+                        src="https://res.cloudinary.com/csmohan/image/upload/v1649000490/leadership-team/vidhya2_vwsfyb.jpg"
+                        alt="V Chitra">
+                    <h4>V Chitra</h4>
+                    <p class="title">Partner</p>
+                </div>
+                <div class="col-md-8 order-sm-1">
+                    <div class="details">
+                        <p>Mrs. Chitra has more than two decades of experience in Corporate before she co founded CSM
+                            Corporate Services along with Mr. Mohan.
+                        </p>
+                        <p>She heads the Operations of CSM Corporate Services and assesses candidates individually with
+                            Technical and personality based questions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- /.row -->
     </div>
     <!-- /.container -->
@@ -144,9 +266,9 @@
                         72, VGP Selva Nagar, Second Main road,<br />
                         Velachery, Chennai-600 042.<br />
                         (Near Velachery Railway Station & PVR Cinemas )</p>
-                    <p><i class="ri-mail-fill"></i> <a href="mailto:needamohan2@gmail.com">needamohan2@gmail.com</a>
+                    <p><i class="ri-mail-fill"></i> <a href="mailto:csm@csmohan.in">csm@csmohan.in</a>
                         (For Employers) <br /><i class="ri-mail-fill"></i> <a
-                            href="csmcorporateservices@gmail.com">csmcorporateservices@gmail.com</a> (For
+                            href="mailto:csmcorporateservices@gmail.com">csmcorporateservices@gmail.com</a> (For
                         candidates)</p>
                 </div>
             </div>
@@ -160,7 +282,8 @@
                 </div>
                 <div class="col-lg-4 copyright">
                     <p class="text-lg-right text-xl-right"><small>Created & Designed by <a
-                                href="https://www.linkedin.com/in/sachinranka4u" target="_blank"> Sachin</a></small></p>
+                                href="https://www.linkedin.com/in/sachinranka4u" target="_blank"> Sachin</a></small>
+                    </p>
                 </div>
             </div>
         </div>

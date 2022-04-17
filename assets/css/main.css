@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
   --------------------------------------------------------------*/
 
 #header {
-  height: 96px;
+  height: 100px;
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
@@ -146,6 +146,11 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0px;
   max-height: 17px;
   vertical-align: baseline;
+}
+
+#header h6 {
+  margin: 0;
+  font-size: 0.9rem;
 }
 
 /*--------------------------------------------------------------

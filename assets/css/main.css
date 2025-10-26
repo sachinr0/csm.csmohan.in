@@ -8,7 +8,7 @@ body {
 }
 
 a {
-  color: #3778c6;
+  color: #bedcff;
 }
 
 a:hover {
@@ -220,6 +220,10 @@ nav.navbar li.nav-item:last-child {
 .nav-menu a:hover, .nav-menu .active>a, .nav-menu li:hover>a {
   color: #3778c6;
   text-decoration: none;
+}
+
+.nav-menu li.nav-item {
+  margin-right: 8px;
 }
 
 .nav-menu .drop-down ul {
